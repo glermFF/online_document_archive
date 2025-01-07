@@ -1,9 +1,13 @@
 <h1 align="center">online_document_archive</h1>
 
 Este projeto é um trabalho feito para a matéria de Sistemas Web, onde tive que codar uma aplicação 
-que utiliza os recursos da web para sua funcionalidade. 
+que utiliza os recursos da web para suas funcionalidades. 
 
-
+### 💻 Tecnologias
+<p>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">  
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+</p>
 
 ## Sobre
 
@@ -24,6 +28,9 @@ para as pessoas !
 "Knowledge to all, no copyright, and open access." - Alexandra Elbakyan
 
 
-## Funcionalidades 
+## ⚙️ Funcionalidades 
+- 📥 Baixar documentos;
+- (User) 📤 Publicar documentos;
+- (User) 📊 Votação que decide o mantimento do documento;
+- 🛡️ Detecção de malware;
 
-*Em Breve*
