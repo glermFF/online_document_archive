@@ -1,0 +1,33 @@
+.home_section{
+    padding: 2em;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_section h1{
+    font-size: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.home_section h2{
+    font-size: 1.5em;
+    margin: 30vh;
+}
+
+.home_section p {
+    margin-bottom: 1em;
+}
+
+.home_section input{
+    padding: 0 10vh;
+
+}
+
+.books_added{
+    border: 1px solid black;
+}
