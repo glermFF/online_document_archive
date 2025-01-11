@@ -1,0 +1,10 @@
+:root{
+    --back-color-dark: #1A3F2A;
+}
+
+*{
+    
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

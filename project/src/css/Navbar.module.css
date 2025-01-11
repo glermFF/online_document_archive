@@ -1,25 +1,12 @@
-body{
-    margin: 0;
-    padding: 0;
-
-    color: black;
-    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
-}
-
 .nav_bar{
-    padding: 2px;
+    padding: 20px;
+    margin: 1px;
 
     background-color: darkslateblue;
     color: aliceblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.nav_logo{
-    padding: 1rem 0 0 1.5rem ;
-
-    text-decoration: none;
 }
 
 .nav_menu1{
@@ -29,20 +16,6 @@ body{
 
     display: flex;
     gap: 10px;
-}
-
-.books{
-    padding: 3px;
-
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.books:hover{
-    cursor: pointer;
-    transition: .3s;
-    background-color: cornsilk;
-    color: cadetblue;
 }
 
 .search_bar{
