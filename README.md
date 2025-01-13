@@ -32,5 +32,4 @@ para as pessoas !
 - 📥 Baixar documentos;
 - (User) 📤 Publicar documentos;
 - (User) 📊 Votação que decide o mantimento do documento;
-- 🛡️ Detecção de malware;
 

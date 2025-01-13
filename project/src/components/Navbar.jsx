@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 import styles from '../css/Navbar.module.css'
 import Logo from "./Logo";
+import LinkPage from "./LinkPage";
 
 
 const Navbar = () => {
@@ -16,8 +17,11 @@ const Navbar = () => {
             </div>
             <div>
                 <ul className={styles.nav_menu2}>
-                    <li>Log in</li>
-                    <li>Sign in</li>
+                <li><LinkPage to="../pages/UserPage" text="User"/></li>
+                    {/* 
+                    <li><LinkPage to="" text="Log In"/></li>
+                    <li><LinkPage to="" text="Sign In"/></li>
+                    */}
                 </ul>
             </div>
         </div>

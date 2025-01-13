@@ -1,0 +1,12 @@
+.btn{
+    padding: .5em 1em;
+
+    background-color: purple;
+    color: aliceblue;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-color: rgb(172, 3, 172);
+    color: #c3c3c3;
+}
