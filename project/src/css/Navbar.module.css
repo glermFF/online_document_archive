@@ -1,8 +1,9 @@
 .nav_bar{
     padding: 20px;
-    margin: 1px;
+    margin: 0;
 
     background-color: darkslateblue;
+    border-radius: 0px 0px 5px 5px;
     color: aliceblue;
     display: flex;
     flex-direction: row;
@@ -10,7 +11,7 @@
 }
 
 .nav_menu1{
-    padding: 0 10rem 0 0;
+    padding: 0 6rem 0 0;
 
     list-style: none;
 
@@ -18,9 +19,13 @@
     gap: 10px;
 }
 
+.nav_menu1_item{
+    padding-top: 3.5px;
+}
+
 .search_bar{
     margin: 1px 0px;
-    padding: 3px 30px 1px 10px;
+    padding: 3px 30px 1px 20px;
 
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -28,7 +33,6 @@
 
 .nav_menu2{
     padding: 0 1rem;
-
     list-style: none;
 
     display: flex;

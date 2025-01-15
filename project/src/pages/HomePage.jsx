@@ -1,8 +1,8 @@
 import React from "react"
 
-import Navbar from "../components/Navbar"
+import Navbar from "../components/layout/Navbar"
 import HomeComponent from "../components/HomeComponent"
-import Footer from "../components/Footer"
+import Footer from "../components/layout/Footer"
 
 const HomePage = () => {
     return(
