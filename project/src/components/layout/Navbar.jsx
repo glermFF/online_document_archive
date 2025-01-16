@@ -10,7 +10,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     function details(){
-        navigate('/user')
+        navigate('/login')
     }
 
     return(
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <ul className={styles.nav_menu2}>
                     <li>
                         <button onClick={details}>
-                            Usuario
+                            Conta
                         </button>
                     </li>
                 </ul>
