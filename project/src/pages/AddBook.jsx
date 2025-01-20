@@ -1,5 +1,6 @@
 import BookForm from "../components/BookForm"
 import Navbar from "../components/layout/Navbar"
+import Footer from "../components/layout/Footer"
 
 function AddBook() {
     return(
@@ -7,6 +8,7 @@ function AddBook() {
             <Navbar/>
             <h2>Adicionar livro ao acervo</h2>
             <BookForm/>
+            <Footer/>
         </div>
     )
 }

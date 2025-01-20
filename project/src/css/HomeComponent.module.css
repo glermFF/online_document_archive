@@ -30,3 +30,36 @@
 .books_added{
     border: 1px solid black;
 }
+
+.book_container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book_card{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  .book-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }

@@ -5,16 +5,20 @@ function BookForm() {
             <p>Preencha os Campos</p>
             <form action="">
                 <div>
-                    <input type="text" />
+                    <p>Nome do Livro</p>
+                    <input type="text" placeholder="Insira o nome do livro" name="name"/>
                 </div>
                 <div>
-                    <input type="text" />
+                    <p>Autor</p>
+                    <input type="text" placeholder="Insira o autor do livro" name="autor"/>
                 </div>
                 <div>
-                    <input type="text" />
+                    <p>Categoria</p>
+                    <Select text="Categoria do livro"></Select>
                 </div>
                 <div>
-                    <input type="text" />
+                    <p>Tag</p>
+                    <Select text="tag"></Select>
                 </div>
                 
                 <select name="Categoria">

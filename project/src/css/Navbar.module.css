@@ -38,3 +38,14 @@
     display: flex;
     gap: 10px;
 }
+
+button{
+    padding: 3px;
+    border: 1px solid #ddd;
+    background-color: rgb(123, 71, 172);
+}
+
+button:hover{
+    transition: .3s;
+    background-color: rgb(156, 91, 216);
+}
