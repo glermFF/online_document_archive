@@ -40,8 +40,13 @@
 }
 
 button{
-    padding: 3px;
-    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
     background-color: rgb(123, 71, 172);
 }
 

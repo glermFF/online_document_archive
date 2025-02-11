@@ -9,22 +9,40 @@ function HomeComponent () {
             <div className={styles.books_added}>
                 <h2>Adicionados Recentemente</h2>
                 <div className={styles.book_container}>
-                    <div className={styles.book_card}>
-                        <h3>Livro - Nome</h3>
-                        <p>Autor: </p>
-                    </div>
+                    <ul>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+
+            <div className={styles.most_downloaded}>
+                <h2>Mais baixados</h2>
                 <div className={styles.book_container}>
-                    <div className={styles.book_card}>
-                        <h3>Livro - Nome</h3>
-                        <p>Autor: </p>
-                    </div>
-                </div>
-                <div className={styles.book_container}>
-                    <div className={styles.book_card}>
-                        <h3>Livro - Nome</h3>
-                        <p>Autor: </p>
-                    </div>
+                    <ul>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                        <li className={styles.book_card}>
+                            <h3>Livro - Nome</h3>
+                            <p>Autor: </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

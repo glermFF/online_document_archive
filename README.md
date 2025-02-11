@@ -12,7 +12,7 @@ que utiliza os recursos da web para suas funcionalidades.
 ## Sobre
 
 O projeto consiste em um site que funciona como um acervo online para documentos digitais com o intuito
-de fornecer livre acesso ao conhecimento para os demais usuários que caírem dentro do site de para-quedas.
+de fornecer livre acesso ao conhecimento a qualquer usuário que consiga acessar o site.
 Por meio dele você pode procurar por artigos, livros e outros documentos de texto (.doc) ou pdf's do seu
 interesse sem a necessidade de criar uma conta. Entrou, achou, baixou. 
 
@@ -32,4 +32,3 @@ para as pessoas !
 - 📥 Baixar documentos;
 - (User) 📤 Publicar documentos;
 - (User) 📊 Votação que decide o mantimento do documento;
-
