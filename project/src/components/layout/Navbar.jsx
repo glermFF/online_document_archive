@@ -2,8 +2,8 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
-import styles from '/src/css/Navbar.module.css'
-import Logo from "../Logo";
+import styles from './Navbar.module.css'
+import Logo from "../../logo/Logo";
 
 
 const Navbar = () => {

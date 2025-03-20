@@ -1,6 +1,6 @@
-import BookForm from "../components/BookForm"
-import Navbar from "../components/layout/Navbar"
-import Footer from "../components/layout/Footer"
+import BookForm from "../../components/book/BookForm"
+import Navbar from "../../components/layout/Navbar"
+import Footer from "../../components/layout/Footer"
 
 function AddBook() {
     return(
