@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 
-import styles from '../css/UserPage.module.css'
-import Navbar from "../components/layout/Navbar"
+import styles from './UserPage.module.css'
+import Navbar from "../../components/layout/Navbar"
 
 function UserPage() {
     const navigate = useNavigate()

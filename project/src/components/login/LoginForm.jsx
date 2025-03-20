@@ -1,7 +1,7 @@
 import { CiUser } from "react-icons/ci";
 import { MdPassword } from "react-icons/md";
 
-import styles from "../css/LoginForm.module.css"
+import styles from "./LoginForm.module.css"
 
 function LoginForm (){
     return(

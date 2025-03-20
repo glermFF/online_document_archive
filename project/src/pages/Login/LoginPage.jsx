@@ -1,9 +1,9 @@
 import React from "react";
 
-import styles from "../css/LoginPage.module.css"
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
-import LoginForm from "../components/LoginForm";
+import styles from "./LoginPage.module.css"
+import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
+import LoginForm from "../../components/login/LoginForm";
 
 function LoginPage (){
     return(
