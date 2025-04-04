@@ -1,14 +1,20 @@
-.container{
+:root{
+    --button-color: #284C70;
+    --button-hover-color: #2e567e;
+}
+
+.container {
     width: 420px;
     padding: 40px;
-    margin-left: 70vh;
-    margin-top: 20vh;
-
+    
+    margin: 10vh auto;
+    
     border: 1px solid rgba(8, 8, 8, 0.2);
     border-radius: 10px;
-
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container_title{
@@ -32,20 +38,27 @@
     padding: 20px 40px;
 }
 
-.acess_button{
+.acess_button {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
 }
 
-.acess_button button{
-    padding: 20px 50px;
-    border-radius: 5px;
-    transition: .2s;
+.acess_button button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    
+    color: white;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    
+    transition: background 0.3s ease-in-out;
 }
 
-.acess_button button:hover{
-    transition: .2s;
+.acess_button button:hover {
+    background-color: var(--button-hover-color);
 }

@@ -1,5 +1,5 @@
 :root{
-    --back-color-dark: #1A3F2A;
+    --back-color-dark: #fff;
 }
 
 *{
@@ -7,4 +7,19 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--back-color-dark);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
 }

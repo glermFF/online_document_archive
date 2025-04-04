@@ -1,33 +1,65 @@
-function BookForm() {
-    return(
-        <div>
+import { useState } from "react";
+import axios from "axios"
+import styles from "./BookForm.module.css"
 
-            <p>Preencha os Campos</p>
-            <form action="">
-                <div>
-                    <p>Nome do Livro</p>
-                    <input type="text" placeholder="Insira o nome do livro" name="name"/>
-                </div>
-                <div>
-                    <p>Autor</p>
-                    <input type="text" placeholder="Insira o autor do livro" name="autor"/>
-                </div>
-                <div>
-                    <p>Categoria</p>
-                    <Select text="Categoria do livro"></Select>
-                </div>
-                <div>
-                    <p>Tag</p>
-                    <Select text="tag"></Select>
-                </div>
-                
-                <select name="Categoria">
-                    <option disabled></option>
-                </select>
-            </form>
+const BookForm = ({ onSubmit }) => {
+    const [title, setTitle] = useState("");
+    const [author, setAuthor] = useState("");
+    const [year, setYear] = useState("");
+    const [tag, setType] = useState("");
+    const [file, setFile] = useState(null);
 
-        </div>
-    )
-}
+    const handleSubmit  = async (e) => {
+        e.preventDefault();
+        if (!file) {
+            alert("Por favor, selecione um arquivo.");
+            return;
+        }
 
-export default BookForm
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("author", author);
+        formData.append("year", year);
+        formData.append("tag", tag);
+        formData.append("file", file);
+
+        try {
+            
+             const response = await axios.post("http://localhost:5555/upload", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
+            alert("Livro cadastrado com sucesso!");
+            console.log(response.data); 
+            window.location.reload();  
+        } catch (error) {
+            alert("Erro ao cadastrar livro!");
+            console.error(error);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className={styles.formContainer}>
+            <label>Título:</label>
+            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+
+            <label>Autor:</label>
+            <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+
+            <label>Ano de Publicação:</label>
+            <input type="number" value={year} onChange={(e) => setYear(e.target.value)} required />
+
+            <label>Tag:</label>
+            
+            <input type="text" value={tag} onChange={(e) => setType(e.target.value)} required />
+
+            <label>Arquivo:</label>
+            <input type="file" accept=".pdf,.epub,.mobi,.docx" onChange={(e) => setFile(e.target.files[0])} required />
+
+            <button type="submit">Adicionar Livro</button>
+        </form>
+    );
+};
+
+export default BookForm;

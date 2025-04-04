@@ -1,52 +1,42 @@
-import React from "react"
-import styles from './HomeComponent.module.css'
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import BookCard from "../card/BookCard";
+import styles from "./HomeComponent.module.css";
 
-function HomeComponent () {
-    return(
+function HomeComponent() {
+    
+    const [book, setBook] = useState([])
+
+    useEffect(() => {
+        const mapBooks = async () => {
+            try{
+                const response = await axios.get("http://localhost:5555/books")
+                setBook(response.data)
+            } catch (error){
+                console.error("Error na busca", error)
+            }
+        }
+
+        mapBooks()
+    }, [])
+     
+
+    return (
         <section className={styles.home_section}>
-            <h1>Bem-vindo a Rede de Saber</h1>
-
-            <div className={styles.books_added}>
-                <h2>Adicionados Recentemente</h2>
+            <h1 className={styles.title}>Bem-vindo à Rede de Saber</h1>
+            
+            <h2 className={styles.section_title}>Adicionados Recentemente</h2>
+            <div className={styles.books_section}>
                 <div className={styles.book_container}>
-                    <ul>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className={styles.most_downloaded}>
-                <h2>Mais baixados</h2>
-                <div className={styles.book_container}>
-                    <ul>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
-                        <li className={styles.book_card}>
-                            <h3>Livro - Nome</h3>
-                            <p>Autor: </p>
-                        </li>
+                    <ul className={styles.book_list}>
+                            {book.map((book, index) => (
+                                <BookCard key={index} title={book.title} author={book.author} coverImg={`https://localhost:5555/upload/${book.filePath}`} fileUrl={book.filePath}/>
+                            ))}
                     </ul>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default HomeComponent
+export default HomeComponent;

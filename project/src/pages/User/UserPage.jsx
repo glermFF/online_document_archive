@@ -1,26 +1,33 @@
 import { useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 
 import styles from './UserPage.module.css'
-import Navbar from "../../components/layout/Navbar"
 
 function UserPage() {
-    const navigate = useNavigate()
 
-    function details(){
-        navigate('/addbook')
-    }
+    const [userName, setUserName] = useState("");
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const storedUserName = localStorage.getItem('userName') || "Usuário Anônimo"; // Exemplo, substitua conforme seu sistema
+        setUserName(storedUserName);
+    }, []);
 
     return(
-        <div>
-            <Navbar/>
-            <h1>Pagina de Usuário</h1>
-            <p>Olá, User</p>
+        <div className={styles.userPage}>
+            <div className={styles.userContainer}>
+                <h1>Olá, {userName}</h1>
 
-            <p>
-                <button onClick={details}>
-                    Colaborar
-                </button>
-            </p>
+                <p>
+                    Colabore com o projeto e publique um livro
+                </p>
+
+                <p>
+                    <button onClick={() => navigate("/addbook")}>
+                        Colaborar
+                    </button>
+                </p>
+            </div>
         </div>
     )
 }

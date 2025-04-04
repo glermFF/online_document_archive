@@ -1,0 +1,9 @@
+:root{
+    --bg-color-main:#3A668E;
+}
+
+.footer{
+    background-color: var(--bg-color-main);
+    padding: 6vh;
+    text-align: center;
+}
