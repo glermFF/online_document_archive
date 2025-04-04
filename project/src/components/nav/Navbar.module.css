@@ -1,0 +1,79 @@
+:root{
+    --bg-color-main:#3A668E;
+    --bg-color-secondary: #1C3752;
+
+    --button-color: #284C70;
+    --button-hover-color: #2e567e;
+}
+
+.nav_bar{
+    height: 90px;
+    margin: 0;
+
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--bg-color-main);
+    color: aliceblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px;
+    
+    background-color: var(--bg-color-secondary);
+}
+
+.search_icon{
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.search_bar{
+    padding: 5px;
+    
+    border: none;
+    outline: none;
+
+    border-radius: 5px;
+    width: 20%;
+
+    font-size: 16px;
+    color: black;
+}
+
+.account_button{
+    display: flex;
+    gap: 15px;
+    padding: 8px 16px;
+    margin: 0.5rem;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+}
+
+button:hover{
+    transition: .3s;
+    background-color: var(--button-hover-color);
+}

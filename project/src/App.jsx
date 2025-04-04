@@ -1,12 +1,18 @@
-import HomePage from './pages/Home/HomePage'
-
+import { BrowserRouter } from 'react-router-dom'
+import AppRoutes from './routes'
+import Navbar from './components/nav/Navbar'
+import Footer from './components/footer/Footer'
 import "./App.css"
 
 function App() {
 
   return (
     <>
-      <HomePage/>
+      <BrowserRouter>
+          <Navbar/>
+          <AppRoutes/>
+      </BrowserRouter>
+        <Footer/>
     </>
   )
 }
