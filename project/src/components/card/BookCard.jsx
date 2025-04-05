@@ -21,7 +21,7 @@ const BookCard = ({ title, author, coverImg, fileUrl }) => {
               return;
             }
         
-            const downloadUrl = `http://localhost:5555/books/upload/${filename}`
+            const downloadUrl = `http://localhost:5555/books/download/${filename}`
         
             console.log(`Caminho: ${downloadUrl}`);
             window.open(downloadUrl, "_blank");
