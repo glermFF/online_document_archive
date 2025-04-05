@@ -29,7 +29,7 @@ export class BookController {
                     author,
                     year: parseInt(year),
                     tag,
-                    filePath: newFileName,
+                    filePath: `/upload/${newFileName}`,
                 },
             });
 

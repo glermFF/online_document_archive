@@ -6,12 +6,9 @@ const __dirname = path.dirname(__filename);
 
 export const downloadBook = (req, res) => {
     const fileName = decodeURIComponent(req.params.fileName);
-    console.log("Valor de req.params.fileName:", req.params.fileName);
+    console.log("Valor de req.params.fileName: ", fileName);
 
-    const filePath = path.join(__dirname, '..', 'upload', fileName);
-
-    //console.log("Buscando arquivo:", filePath);
-    console.log("Download URL:", downloadUrl); // LOG PRA CONFERIR
+    const filePath = path.join(__dirname, "..",'upload', fileName);
 
     res.sendFile(filePath, (err) => {
         if (err) {

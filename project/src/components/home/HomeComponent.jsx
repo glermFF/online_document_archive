@@ -30,7 +30,7 @@ function HomeComponent() {
                 <div className={styles.book_container}>
                     <ul className={styles.book_list}>
                             {book.map((book, index) => (
-                                <BookCard key={index} title={book.title} author={book.author} coverImg={`https://localhost:5555/upload/${book.filePath}`} fileUrl={book.filePath}/>
+                                <BookCard key={index} title={book.title} author={book.author} coverImg={`https://localhost:5555${book.filePath}`} fileUrl={book.filePath}/>
                             ))}
                     </ul>
                 </div>

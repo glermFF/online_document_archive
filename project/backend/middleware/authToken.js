@@ -8,7 +8,7 @@ export const authenticate = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, "seu_segredo_super_seguro");  // Troque pela chave do seu .env
+        const decoded = jwt.verify(token, "seu_segredo_super_seguro"); 
         req.user = decoded;
         next();
     } catch (error) {

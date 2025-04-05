@@ -8,6 +8,8 @@ const BookForm = ({ onSubmit }) => {
     const [year, setYear] = useState("");
     const [tag, setType] = useState("");
     const [file, setFile] = useState(null);
+    const tagOptions = ["Educação", "Ficção", "História", "Tecnologia", "Arte"];
+
 
     const handleSubmit  = async (e) => {
         e.preventDefault();
@@ -32,7 +34,7 @@ const BookForm = ({ onSubmit }) => {
             });
             alert("Livro cadastrado com sucesso!");
             console.log(response.data); 
-            window.location.reload();  
+            window.location.reload();
         } catch (error) {
             alert("Erro ao cadastrar livro!");
             console.error(error);
@@ -52,7 +54,10 @@ const BookForm = ({ onSubmit }) => {
 
             <label>Tag:</label>
             
-            <input type="text" value={tag} onChange={(e) => setType(e.target.value)} required />
+            <select name="tag" onChange={handleChange} required>
+                <option value="">Selecione uma tag</option>
+                {tagOptions.map((tag, index) => (<option key={index} value={tag.toLowerCase()}>{tag}</option>))}
+            </select>
 
             <label>Arquivo:</label>
             <input type="file" accept=".pdf,.epub,.mobi,.docx" onChange={(e) => setFile(e.target.files[0])} required />

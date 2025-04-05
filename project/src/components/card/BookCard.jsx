@@ -13,10 +13,22 @@ const BookCard = ({ title, author, coverImg, fileUrl }) => {
     cors()
 
     const handleDownload = () => {
-        const filename = fileUrl.split('/').pop()
-        const downloadUrl = `http://localhost:5555/books/download/${filename}`
-        window.open(downloadUrl, "_blank")
-        setPopUpOpen(false)
+        try {
+            const filename = fileUrl.split('/').pop();
+        
+            if (!filename) {
+              console.error("Arquivo inválido.");
+              return;
+            }
+        
+            const downloadUrl = `http://localhost:5555/books/upload/${filename}`
+        
+            console.log(`Caminho: ${downloadUrl}`);
+            window.open(downloadUrl, "_blank");
+            setPopUpOpen(false);
+          } catch (err) {
+            console.error("Ocorreu um erro:", err);
+          }
     }
 
     return (
