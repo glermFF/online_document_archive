@@ -3,12 +3,6 @@
 Este projeto é um trabalho feito para a matéria de Sistemas Web, onde tive que codar uma aplicação 
 que utiliza os recursos da web para suas funcionalidades. 
 
-### 💻 Tecnologias
-<p>
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">  
-<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
-</p>
-
 ## Sobre
 
 O projeto consiste em um site que funciona como um acervo online para documentos digitais com o intuito
@@ -31,4 +25,3 @@ para as pessoas !
 ## ⚙️ Funcionalidades 
 - 📥 Baixar documentos;
 - (User) 📤 Publicar documentos;
-- (User) 📊 Votação que decide o mantimento do documento;

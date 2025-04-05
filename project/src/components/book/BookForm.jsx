@@ -6,8 +6,10 @@ const BookForm = ({ onSubmit }) => {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [year, setYear] = useState("");
-    const [tag, setType] = useState("");
     const [file, setFile] = useState(null);
+    const [cover, setCover] = useState(null); 
+    const [tag, setTag] = useState("");
+
     const tagOptions = ["Educação", "Ficção", "História", "Tecnologia", "Arte"];
 
 
@@ -24,6 +26,7 @@ const BookForm = ({ onSubmit }) => {
         formData.append("year", year);
         formData.append("tag", tag);
         formData.append("file", file);
+        formData.append("cover", cover);
 
         try {
             
@@ -34,7 +37,7 @@ const BookForm = ({ onSubmit }) => {
             });
             alert("Livro cadastrado com sucesso!");
             console.log(response.data); 
-            window.location.reload();
+            window.location.href = "/";
         } catch (error) {
             alert("Erro ao cadastrar livro!");
             console.error(error);
@@ -53,10 +56,11 @@ const BookForm = ({ onSubmit }) => {
             <input type="number" value={year} onChange={(e) => setYear(e.target.value)} required />
 
             <label>Tag:</label>
-            
-            <select name="tag" onChange={handleChange} required>
+            <select name="tag" value={tag} onChange={(e) => setTag(e.target.value)} required>
                 <option value="">Selecione uma tag</option>
-                {tagOptions.map((tag, index) => (<option key={index} value={tag.toLowerCase()}>{tag}</option>))}
+                {tagOptions.map((tag, index) => (
+                    <option key={index} value={tag.toLowerCase()}>{tag}</option>
+                ))}
             </select>
 
             <label>Arquivo:</label>
