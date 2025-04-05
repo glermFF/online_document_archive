@@ -55,8 +55,8 @@
 
 .book_container ul{
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
-    gap: 20px; /* espaçamento entre os cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
     list-style: none;
     padding: 0;
     margin: 0;

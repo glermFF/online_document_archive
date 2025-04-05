@@ -8,7 +8,7 @@ const bookRouter = Router()
 
 bookRouter.get("/", getAllBooks)
 bookRouter.post("/add", BookController.addBook)
-bookRouter.get("/download/:filename", downloadBook)
+bookRouter.get("/upload/:filename", downloadBook)
 //bookRouter.get("/books", )
 
 export default bookRouter
