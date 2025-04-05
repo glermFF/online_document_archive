@@ -29,7 +29,8 @@ export class BookController {
                     author,
                     year: parseInt(year),
                     tag,
-                    filePath: `/upload/${newFileName}`,
+                    filePath: req.file.filename,           
+                    originalName: req.file.originalname    
                 },
             });
 
